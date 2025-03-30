@@ -15,7 +15,7 @@ const Flowers = () => {
     setLoading(true);
     setError(null);
     try {
-      const { data } = await axios.get("http://localhost:3000/api/flowers");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/flowers`);
       setFlowers(data);
     } catch (err) {
       console.error("Error fetching flowers:", err);
@@ -37,7 +37,7 @@ const Flowers = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:3000/api/flowers/${id}`);
+          await axios.delete(`${process.env.REACT_APP_API_URL}/api/flowers/${id}`);
           setFlowers((prevFlowers) => prevFlowers.filter((flower) => flower._id !== id));
           Swal.fire("Deleted!", "The flower has been removed.", "success");
         } catch (err) {
@@ -54,9 +54,9 @@ const Flowers = () => {
     <div className="flowers-container" style={styles.container}>
       {flowers.length > 0 ? (
         flowers.map((flower) => {
-          const imageUrl = flower.image.startsWith("/uploads/")
-            ? `http://localhost:3000${flower.image}`
-            : `http://localhost:3000/uploads/${flower.image}`;
+          const imageUrl = flower.image?.startsWith("/uploads/")
+            ? `${process.env.REACT_APP_API_URL}${flower.image}`
+            : `${process.env.REACT_APP_API_URL}/uploads/${flower.image}`;
 
           return (
             <div key={flower._id} className="flower-card" style={styles.card}>
@@ -90,12 +90,25 @@ const Flowers = () => {
 
 const styles = {
   container: { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", padding: "20px" },
+  card: { border: "1px solid #ddd", padding: "10px", borderRadius: "8px", boxShadow: "2px 2px 5px rgba(0,0,0,0.1)" },
   imageContainer: { position: "relative" },
   image: { width: "150px", height: "150px", objectFit: "cover", borderRadius: "5px" },
   deleteButton: {
-    position: "absolute", top: "5px", right: "5px", fontSize: "12px",
-    background: "red", color: "white", border: "none", borderRadius: "50%", width: "24px", height: "24px",
-    cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center"
+    position: "absolute",
+    top: "5px",
+    right: "5px",
+    fontSize: "12px",
+    background: "red",
+    color: "white",
+    border: "none",
+    borderRadius: "50%",
+    width: "24px",
+    height: "24px",
+    cursor: "pointer",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    transition: "background 0.3s",
   },
   details: { marginTop: "10px", textAlign: "left" },
 };
