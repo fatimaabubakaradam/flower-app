@@ -16,7 +16,14 @@ const Flowers = () => {
     setError(null);
     try {
       const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/flowers`);
-      setFlowers(data);
+      
+      // Filter the flowers to only include those with the specific image paths
+      const filteredFlowers = data.filter((flower) => 
+        ["/uploads/1742851113543.jpg", "/uploads/1742851951424.png", "/uploads/1742862131251.png"]
+          .includes(flower.image)
+      );
+      
+      setFlowers(filteredFlowers);
     } catch (err) {
       console.error("Error fetching flowers:", err);
       setError("Failed to fetch flowers.");
@@ -89,7 +96,6 @@ const Flowers = () => {
 };
 
 const styles = {
-  
   deleteButton: {
     position: "absolute",
     top: "5px",
