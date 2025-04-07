@@ -89,10 +89,7 @@ const Flowers = () => {
 };
 
 const styles = {
-  container: { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", padding: "20px" },
-  card: { border: "1px solid #ddd", padding: "10px", borderRadius: "8px", boxShadow: "2px 2px 5px rgba(0,0,0,0.1)" },
-  imageContainer: { position: "relative" },
-  image: { width: "150px", height: "150px", objectFit: "cover", borderRadius: "5px" },
+  
   deleteButton: {
     position: "absolute",
     top: "5px",
