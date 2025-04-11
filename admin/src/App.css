@@ -1,0 +1,283 @@
+
+.admin-main{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center
+  
+}
+.admin-title{
+  color: red;
+  font-size: 150%;
+  
+}
+.nav-button {
+  display: inline-block;
+  border: 2px solid #666;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.nav-button.active {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+ .nav-button button {
+  background: none;
+  border: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer;
+} 
+.admin-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.admin-nav-2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+
+
+.flowers-container {
+  display: flex;
+  flex-direction: column;
+   align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  
+}
+
+/* Image container */
+.image-container {
+  position: relative;
+}
+
+/* Image styling */
+.flower-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Delete button */
+.delete-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Closing section */
+.closing {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Style each flower card */
+ .flower-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  padding: 15px;
+  width: 60%; 
+   max-width: 600px; 
+} 
+
+/* Image styling */
+ .flower-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #333;
+} 
+
+/* Styling for text */
+.flower-details {
+  font-size: 16px;
+}
+
+/* Bold and red labels */
+.label {
+  font-weight: bold;
+  color: red;
+}
+.cat-req{
+  margin-right: 10px ;
+}
+.p-req{
+  margin-left: 20px;
+}
+.flower-details strong {
+  color: red; 
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.button {
+  padding: 8px 15px;
+  border: 1px solid #999;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #666;
+  background: white;
+}
+
+/* .button-active {
+  padding: 8px 15px;
+  border: 1px solid black;
+  background: black;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+} */
+
+
+
+
+/* .image-box {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+} */
+
+.details {
+  flex: 1;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.flower-category,
+.flower-price {
+  color: red;
+  font-weight: bold;
+}
+
+.flower-description {
+  font-style: italic;
+  color: #555;
+}
+.add-flower-container {
+  width: 400px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.upload-box {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 20px;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: gray;
+}
+
+input, textarea {
+  width:100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.category-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-price div {
+  width: 48%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+ .closing{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px; 
+
+} 
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+ .preview-image{
+  width: 150px;  
+  height: 150px;
+  object-fit: cover; 
+  border-radius: 5px;
+} 
+/* .input-row input {
+  flex: 1;
+} */
+/* .delete-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 12px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+} */
